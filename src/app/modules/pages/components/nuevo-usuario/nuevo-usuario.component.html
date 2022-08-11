@@ -1,0 +1,25 @@
+
+<div class="container">
+    <form [formGroup]="formRegistro" class="mt-10" fxLayout="column" fxLayoutAlign="space-around center">
+        <mat-form-field>
+            <input matInput formControlName="Rut" type="text" placeholder="Rut">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput formControlName="Nombres" type="text" placeholder="Nombres">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput formControlName="Apellidos" type="text" placeholder="Apellidos">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput formControlName="Correo" type="text" placeholder="Correo">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput formControlName="Password" type="text" placeholder="Password">
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" (click)="registrar()">Registrate</button>
+
+
+    </form>
+</div>

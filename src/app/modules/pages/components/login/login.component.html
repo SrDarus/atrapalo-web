@@ -1,4 +1,21 @@
-<div class="container bo">
-    <h1>Login</h1>
+<div class="container">
+    <form class="mt-10" fxLayout="column" fxLayoutAlign="space-around center" [formGroup]="formLogin">
+        <mat-form-field>
+            <input matInput formControlName="user" type="text" placeholder="Usuario">
+        </mat-form-field>
 
+        <mat-form-field>
+            <input matInput formControlName="password" type="password" placeholder="Password">
+        </mat-form-field>
+
+        <div fxLayout="row" >
+            <a mat-button routerLink="registrate">Registrate</a>
+            <a mat-button href="https://www.google.com/" target="_blank">Link</a>
+        </div>
+
+
+        <button mat-raised-button color="primary" (click)="login()">Sumar</button>
+
+
+    </form>
 </div>
