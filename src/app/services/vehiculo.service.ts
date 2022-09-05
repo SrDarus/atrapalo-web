@@ -1,23 +1,19 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Persona } from '../models/persona.model';
-import { UsuarioLogin } from '../models/usuarioLogin.model';
+import { Vehiculo } from '../models/vehiculo';
 
 @Injectable({
   providedIn: 'root'
 })
-export class PersonaService {
+export class VehiculloService {
 
   private urlBase:string = "https://localhost:7163/api/"
 
   constructor( private http: HttpClient ) { }
 
-  login(user: UsuarioLogin ) {
-    let url = `${this.urlBase}login/login`
-    return this.http.post(url, user)
-  }
 
-  registrate(persona: Persona ) {
+
+  guardarVehiculo(veh: Vehiculo ) {
     let url = `${this.urlBase}persona`
 
   //   const headers= new HttpHeaders()
@@ -27,6 +23,6 @@ export class PersonaService {
     let headers = new HttpHeaders();
     headers = headers.set('Content-Type', 'application/json');
 
-    return this.http.post(url, persona, {headers})
+    return this.http.post(url, veh, {headers})
   }
 }

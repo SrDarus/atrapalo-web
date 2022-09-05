@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder } from '@angular/forms';
-import { Persona } from 'src/app/models/persona';
+import { Persona } from 'src/app/models/persona.model';
 import { PersonaService } from '../../../../services/persona.service';
 
 @Component({
@@ -46,8 +46,10 @@ export class NuevoUsuarioComponent implements OnInit {
 
   getPayload():Persona {
     let persona =  {
+      Id: 0,
       Rut: this.getControl('Rut').value,
-      Dv: this.getControl('Dv').value.split('')[this.getControl('Dv').value.length -1],
+      // Dv: this.getControl('Dv').value.split('')[this.getControl('Dv').value.length -1],
+      Dv: 'k',
       Nombres: this.getControl('Nombres').value,
       Apellidos: this.getControl('Apellidos').value,
       Correo: this.getControl('Correo').value,

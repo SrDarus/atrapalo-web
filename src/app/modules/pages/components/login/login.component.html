@@ -1,11 +1,12 @@
 <div class="container">
     <form class="mt-10" fxLayout="column" fxLayoutAlign="space-around center" [formGroup]="formLogin">
+        <h1>Login</h1>
         <mat-form-field>
-            <input matInput formControlName="user" type="text" placeholder="Usuario">
+            <input matInput formControlName="Correo" type="text" placeholder="Correo">
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput formControlName="password" type="password" placeholder="Password">
+            <input matInput formControlName="Password" type="password" placeholder="Password">
         </mat-form-field>
 
         <div fxLayout="row" >
@@ -14,7 +15,7 @@
         </div>
 
 
-        <button mat-raised-button color="primary" (click)="login()">Sumar</button>
+        <button mat-raised-button color="primary" (click)="login()">Inicial Sesion</button>
 
 
     </form>

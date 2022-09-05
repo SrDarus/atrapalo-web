@@ -7,6 +7,9 @@ import { ContainerComponent } from './components/container/container.component';
 import { MaterialModule } from '../material/material.module';
 import { CoreModule } from '../core/core.module';
 import { NuevoUsuarioComponent } from './components/nuevo-usuario/nuevo-usuario.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { HomeComponent } from './components/home/home.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 
@@ -16,17 +19,20 @@ import { NuevoUsuarioComponent } from './components/nuevo-usuario/nuevo-usuario.
     LoginComponent,
     ContainerComponent,
     NuevoUsuarioComponent,
+    HomeComponent,
+    NavbarComponent
   ],
   imports: [
     CommonModule,
     PagesRoutingModule,
     MaterialModule,
     CoreModule,
+    MatSidenavModule  
   ],
   exports: [
     HeaderComponent,
-    ContainerComponent
-
+    ContainerComponent,
+    // MatSidenavModule
   ]
 })
 export class PagesModule { }
